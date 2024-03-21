@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+#about{
+background-color:blue;
+  animation-name: example;
+  animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+}
+
+
+@keyframes example {
+   0%   {background-color:red; }
+  25%  {background-color:yellow;}
+  50%  {background-color:blue; }
+  75%  {background-color:green; }
+  100% {background-color:red; }
+}
+#s{
+padding: 100px 0;
+  border: 2px solid green;
+  text-align:center;
+align-items: center;
+
+}
+#s img{
+border-radius:100px;
+}
+.typing-text {
+    overflow: hidden; /* Hide overflow */
+    border-right: .15em solid orange; /* Simulate typing cursor */
+    white-space: nowrap; /* Keep text in one line */
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+    </style>
+<script>
+function validateForm(event) {
+    event.preventDefault();
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+
+    nameError.textContent = '';
+    emailError.textContent = '';
+    messageError.textContent = '';
+
+    let isValid = true;
+
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name is required';
+        isValid = false;
+    }
+
+    if (emailInput.value.trim() === '') {
+        emailError.textContent = 'Email is required';
+        isValid = false;
+    } else if (!isValidEmail(emailInput.value.trim())) {
+        emailError.textContent = 'Invalid email format';
+        isValid = false;
+    }
+
+    if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Message is required';
+        isValid = false;
+    }
+
+    if (isValid) {
+        // Submit the form or perform further actions
+        console.log('Form submitted successfully');
+    }
+}
+
+function isValidEmail(email) {
+    // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+</script>
+</head>
+<body>
+    <header>
+        <h1>Student Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses </a></li>
+                                <li><a href="#inter">Intership websites</a></li>
+<li><a href="#co">Contact</a></li>
+
+
+                
+            </ul>
+        </nav>
+    </header>
+<div id="s">
+<img src="C:\Users\manga\OneDrive\Desktop\download (3).jpeg" alt="img2">
+
+<h1 class="typing-text">Welcome to student website!.</h1>
+
+
+</div>
+<center>
+    <main><h2>About</h2>
+
+        <section id="about">
+            
+                   <h1>“Learn as if you were not reaching your goal and as though you were scared of missing it”</h1>
+        </section>
+</center>
+        <center><section id="courses">
+            <h2>Courses with Free Certifications</h2>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">GreatLearning Coures</h5>
+        <p class="card-text">The Great Learning  helps learners accelerate their careers and become professionals in their field of interest.</p>
+        <a href="https://www.mygreatlearning.com/" class="btn btn-primary">Go Here</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">EDX courses</h5>
+        <p class="card-text">edX is an online learning destination and MOOC provider, offering high-quality courses from the world's best universities and institutions to learners</p>
+        <a href="https://www.edx.org/about-us" class="btn btn-primary">Go Here</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Class Central Courses</h5>
+        <p class="card-text">Class Central aggregates courses from many providers to help you find the best courses on almost any subject, wherever they exist.</p>
+        <a href="https://www.classcentral.com/" class="btn btn-primary">Go Here</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Udemy Courses</h5>
+        <p class="card-text">Udemy is an online learning and teaching marketplace with over 213000 courses and 62 million students.</p>
+        <a href="https://www.udemy.com/?utm_source=adwords-brand&utm_medium=udemyads&utm_campaign=Brand-Udemy_la.EN_cc.INDIA_dev.&utm_term=_._ag_133043842301_._ad_595460368494_._de_c_._dm__._pl__._ti_kwd-296956216253_._li_9154446_._pd__._&utm_term=_._pd__._kw_udemy_._&matchtype=b&gad_source=1&gclid=CjwKCAjwte-vBhBFEiwAQSv_xVp7j7mRrWRprcgTb1ySGrYsvDs6EICVYnKDr7t8UlJi5SCYH38ooxoC9LIQAvD_BwE" class="btn btn-primary">Go Here</a>
+      </div>
+    </div>
+  </div>
+</div>
+                    </section></center>
+
+        <section id="inter">
+          <center>  <h2>Intership</h2></center>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Bharat Intership</h5>
+        <p class="card-text">We are Bharat Intern, a pioneering company dedicated to offering enriching virtual internship opportunities for college students.</p>
+        <a href="https://bharatintern.live/" class="btn btn-primary">Apply Here</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Codesoft</h5>
+        <p class="card-text">Our internship program is designed to help you build lifelong relationships with fellow interns.</p>
+        <a href="https://www.codsoft.in/" class="btn btn-primary">Apply Here</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Internpe</h5>
+        <p class="card-text">
+The Benefits of an Internship | George Fox University
+An internship provides you with firsthand experience, professional opportunities and personal growth.</p>
+        <a href="https://internpe.in/" class="btn btn-primary">Apply Here</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Oasis Infobyte</h5>
+        <p class="card-text">Master the Fundamentals of Programming in Java from the comfort of your home and get certified to apply for great job opportunities.</p>
+        <a href="https://oasisinfobyte.com/" class="btn btn-primary">Apply Here</a>
+      </div>
+    </div>
+  </div>
+</div>
+                    </section>
+    </main>
+<section id="co">
+<div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="error" id="message-error"></div>
+            </div>
+            <button type="submit"><a href=mailto:mmadhusudhan80@gmail.com>Submit</a></button>
+        </form>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 Student Website</p>
+    </footer>
+
+   </body>
+</html>
